@@ -107,7 +107,7 @@ li{
   display: inline;
 }
 
-button{
+.nav-button{
   background-color: lightslategray;
   color: darkslategray;
   font-size: 20px;
@@ -115,6 +115,9 @@ button{
   height: 45px;
   width: auto;
   border-right: 15px solid darkslategray;
+}
+.calculate-button{
+
 }
 p{
   padding-left: 5px;

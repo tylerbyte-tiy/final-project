@@ -12,10 +12,10 @@
       <img class="dollar-sign" src="dollar-sign.png" alt="" />
       <nav>
         <ul>
-          <li><a href="index.html"><button>Home</button></a></li>
-          <li><a href="sign-up.html"><button>Sign Up/Log In</button></a></li>
-          <li><a href="#"><button>Search</button></a></li>
-          <li><a href="#"><button>Profile</button></a></li>
+          <li><a href="index.html"><button class="nav-button">Home</button></a></li>
+          <li><a href="sign-up.html"><button class="nav-button">Sign Up/Log In</button></a></li>
+          <li><a href="#"><button class="nav-button">Search</button></a></li>
+          <li><a href="#"><button class="nav-button">Profile</button></a></li>
         </ul>
       </nav>
     </header>
@@ -50,7 +50,7 @@
     <fieldset>
         <legend>Sources</legend>
         <label for="username">
-          <select>
+          <select  class="align-left">
             <option value="">Paycheck</option>
             <option value="">Side job</option>
             <option value="">Gift</option>
@@ -58,10 +58,10 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input id="username" type="text" name="username">
+        <input class="align-left" id="username" type="text" name="username">
 
         <label for="username">
-          <select>
+          <select class="align-left">
             <option value="">Paycheck</option>
             <option value="">Side job</option>
             <option value="">Gift</option>
@@ -69,10 +69,10 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input id="" type="text" name="username">
+        <input  class="align-left" id="" type="text" name="username">
 
         <label for="username">
-          <select>
+          <select class="align-left">
             <option value="">Paycheck</option>
             <option value="">Side job</option>
             <option value="">Gift</option>
@@ -80,10 +80,10 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input id="" type="text" name="username">
+        <input  class="align-left" id="" type="text" name="username">
 
         <label for="username">
-          <select>
+          <select  class="align-left">
             <option value="">Paycheck</option>
             <option value="">Side job</option>
             <option value="">Gift</option>
@@ -91,10 +91,10 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input id="" type="text" name="username">
+        <input  class="align-left" id="" type="text" name="username">
 
         <label for="username">
-          <select>
+          <select class="align-left">
             <option value="">Paycheck</option>
             <option value="">Side job</option>
             <option value="">Gift</option>
@@ -102,12 +102,16 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input id="" type="text" name="username">
+        <input  class="align-left" id="" type="text" name="username">
 
-        <label for="password">Total Income: </label>
-        $<p id= "total-income"></p>
+        <div class="align-left">
+          <input type="submit" value="Submit">
 
-    <input type="submit" value="Submit">
+          <label for="password">Total Income: </label>
+          $<p id= "total-income"></p>
+
+        </div>
+
   </fieldset>
 </form>
 
@@ -134,7 +138,7 @@
     <fieldset>
         <legend>Sources</legend>
         <label for="username">
-          <select>
+          <select class="align-left">
             <option value="">Housing</option>
             <option value="">Transportation</option>
             <option value="">Food</option>
@@ -142,10 +146,10 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input id="" type="text" name="username">
+        <input class="align-left" id="" type="text" name="username">
 
         <label for="username">
-          <select>
+          <select class="align-left">
             <option value="">Housing</option>
             <option value="">Transportation</option>
             <option value="">Food</option>
@@ -153,10 +157,10 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input id="" type="text" name="username">
+        <input class="align-left" id="" type="text" name="username">
 
         <label for="username">
-          <select>
+          <select class="align-left">
             <option value="">Housing</option>
             <option value="">Transportation</option>
             <option value="">Food</option>
@@ -164,10 +168,10 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input id="" type="text" name="username">
+        <input class="align-left" id="" type="text" name="username">
 
         <label for="username">
-          <select>
+          <select class="align-left">
             <option value="">Housing</option>
             <option value="">Transportation</option>
             <option value="">Food</option>
@@ -175,10 +179,10 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input id="" type="text" name="username">
+        <input class="align-left" id="" type="text" name="username">
 
         <label for="username">
-          <select>
+          <select class="align-left">
             <option value="">Housing</option>
             <option value="">Transportation</option>
             <option value="">Food</option>
@@ -186,12 +190,14 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input id="" type="text" name="username">
+        <input class="align-left" id="" type="text" name="username">
 
-        <label for="password">Total Expenses: </label>
-        $<p id= "total-expenses"></p>
+        <div class="align-left">
+          <input type="submit" value="Submit">
+          <label for="password">Total Expenses: </label>
+          $<p id= "total-expenses"></p>
+        </div>
 
-    <input type="submit" value="Submit">
   </fieldset>
 </form>
         </article>
@@ -213,7 +219,8 @@
                     <option value="">November</option>
                     <option value="">December</option></select></time>
           </header>
-          
+          <button class="calculate-button" type="button" name="button">Calculate Balance</button>
+
         </article>
 
       </section>
