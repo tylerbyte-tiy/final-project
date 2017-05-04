@@ -1,0 +1,121 @@
+body{
+  background-color: lightslategray;
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+
+}
+nav{
+  float: right;
+}
+.align-left{
+  float: left;
+  clear: both;
+}
+.align-right{
+  float: right;
+  clear: both;
+}
+
+footer{
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  background-color: midnightblue;
+  color: yellow;
+  text-align: center;
+  float: none;
+  clear: both;
+}
+.sidebar{
+  border: 5px solid lightslategray;
+  padding-left: 10px;
+  background-color: forestgreen;
+  float: left;
+  clear: both;
+}
+.another-sidebar{
+  border: 5px solid lightslategray;
+  padding-left: 10px;
+  background-color: darkgreen;
+  float: right;
+  clear: both;
+}
+.article-one{
+  background-color: white;
+  border-radius: 50px 0px 50px 0px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+
+}
+.article-two{
+  background-color: white;
+  border-radius: 0px 50px 0px 50px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+
+}
+.articles{
+  border: 5px solid lightslategray;
+  background-color: darkseagreen;
+  padding: 5px 10px 20px 15px;
+  float: left;
+  clear: both;
+}
+
+.dollar-sign{
+  height: 60px;
+  width: 60px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+header{
+  background-color: darkslategray;
+
+}
+.header-one{
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  border: 3px solid white;
+  border-color: darkslategray;
+  background-color: darkslategray;
+  border-radius: 50px 0px 0px 0px;
+  padding-left: 10px;
+}
+.header-two{
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  border: 3px solid white;
+  border-color: darkslategray;
+  background-color: darkslategray;
+  border-radius: 0px 50px 0px 0px;
+}
+a{
+   color: white;
+}
+.links{
+  color: purple;
+}
+time{
+  color: white;
+  padding-top: 20px;
+}
+
+li{
+  list-style: none;
+  float: left;
+  display: inline;
+}
+
+button{
+  background-color: lightslategray;
+  color: darkslategray;
+  font-size: 20px;
+  border: none;
+  height: 45px;
+  width: auto;
+  border-right: 15px solid darkslategray;
+}
+p{
+  padding-left: 5px;
+}
