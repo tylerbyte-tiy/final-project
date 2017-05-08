@@ -22,9 +22,10 @@
     </header>
     <main>
       <section class="sidebar">
-        <h2>Left Sidebar</h2>
+        <h2>Spending more than you're making?</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Check out these sites for frugal living:
+          <a href="https://www.thepennyhoarder.com/">The Penny Hoarder</a>
         </p>
       </section>
       <section class="articles">
@@ -34,7 +35,9 @@
             <h3>
               <a href="http://example.com/article-link">Income</a>
             </h3>
-            <time datetime="2016-10-30T08:30Z">For <select><option value="">January</option>
+            <div class="month">
+
+            For <select><option value="">January</option>
                     <option value="">February</option>
                     <option value="">March</option>
                     <option value="">April</option>
@@ -45,12 +48,45 @@
                     <option value="">September</option>
                     <option value="">October</option>
                     <option value="">November</option>
-                    <option value="">December</option></select></time>
+                    <option value="">December</option></select></div>
           </header>
-          <form method="POST" action="">
+          <div>
     <fieldset>
         <legend>Sources</legend>
         <label for="username">
+          <select class="align-left">
+            <option value="">Paycheck</option>
+            <option value="">Side job</option>
+            <option value="">Gift</option>
+            <option value="">Investment return</option>
+            <option value="">Other</option>
+          </select>
+        </label>
+        <!--  ADD SANITIZER FOR INPUT FIELDS-->
+        <input class="align-left" type="text" name="" value="">
+
+        <label for="username">
+          <select class="align-left">
+            <option value="">Paycheck</option>
+            <option value="">Side job</option>
+            <option value="">Gift</option>
+            <option value="">Investment return</option>
+            <option value="">Other</option>
+          </select>
+        </label>
+        <input class="align-left" type="text" name="" value="">
+        <label for="username">
+          <select class="align-left">
+            <option value="">Paycheck</option>
+            <option value="">Side job</option>
+            <option value="">Gift</option>
+            <option value="">Investment return</option>
+            <option value="">Other</option>
+          </select>
+        </label>
+        <input class="align-left" type="text" name="" value="">
+
+        <label for="username">
           <select  class="align-left">
             <option value="">Paycheck</option>
             <option value="">Side job</option>
@@ -59,7 +95,7 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input class="align-left" id="username" type="text" name="username">
+        <input class="align-left" type="text" name="" value="">
 
         <label for="username">
           <select class="align-left">
@@ -70,51 +106,18 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input  class="align-left" id="" type="text" name="username">
-
-        <label for="username">
-          <select class="align-left">
-            <option value="">Paycheck</option>
-            <option value="">Side job</option>
-            <option value="">Gift</option>
-            <option value="">Investment return</option>
-            <option value="">Other</option>
-          </select>
-        </label>
-        <input  class="align-left" id="" type="text" name="username">
-
-        <label for="username">
-          <select  class="align-left">
-            <option value="">Paycheck</option>
-            <option value="">Side job</option>
-            <option value="">Gift</option>
-            <option value="">Investment return</option>
-            <option value="">Other</option>
-          </select>
-        </label>
-        <input  class="align-left" id="" type="text" name="username">
-
-        <label for="username">
-          <select class="align-left">
-            <option value="">Paycheck</option>
-            <option value="">Side job</option>
-            <option value="">Gift</option>
-            <option value="">Investment return</option>
-            <option value="">Other</option>
-          </select>
-        </label>
-        <input  class="align-left" id="" type="text" name="username">
+        <input class="align-left" type="text" name="" value="">
 
         <div class="align-left">
-          <input type="submit" value="Submit">
+          <button type="button" name="button">Add Income fields</button>
 
           <label for="password">Total Income: </label>
-          $<p id= "total-income"></p>
+          $<p id= "totalIncome"></p>
 
         </div>
 
   </fieldset>
-</form>
+</div>
 
         </article>
         <article class="article-two">
@@ -122,7 +125,9 @@
             <h3>
               <a href="http://example.com/article-link" >Expenses</a>
             </h3>
-            <time datetime="2016-10-30T09:30Z">For <select><option value="">January</option>
+            <div class="month">
+
+            For <select><option value="">January</option>
                     <option value="">February</option>
                     <option value="">March</option>
                     <option value="">April</option>
@@ -133,9 +138,9 @@
                     <option value="">September</option>
                     <option value="">October</option>
                     <option value="">November</option>
-                    <option value="">December</option></select></time>
+                    <option value="">December</option></select></div>
           </header>
-          <form method="POST" action="">
+          <div>
     <fieldset>
         <legend>Sources</legend>
         <label for="username">
@@ -147,7 +152,7 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input class="align-left" id="" type="text" name="username">
+        <input class="align-left" type="text" name="" value="">
 
         <label for="username">
           <select class="align-left">
@@ -158,7 +163,7 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input class="align-left" id="" type="text" name="username">
+        <input class="align-left" type="text" name="" value="">
 
         <label for="username">
           <select class="align-left">
@@ -169,7 +174,7 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input class="align-left" id="" type="text" name="username">
+        <input class="align-left" type="text" name="" value="">
 
         <label for="username">
           <select class="align-left">
@@ -180,7 +185,7 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input class="align-left" id="" type="text" name="username">
+        <input class="align-left" type="text" name="" value="">
 
         <label for="username">
           <select class="align-left">
@@ -191,23 +196,23 @@
             <option value="">Other</option>
           </select>
         </label>
-        <input class="align-left" id="" type="text" name="username">
+        <input class="align-left" type="text" name="" value="">
 
         <div class="align-left">
-          <input type="submit" value="Submit">
+          <button type="button" name="button">Add expenses fields</button>
           <label for="password">Total Expenses: </label>
-          $<p id= "total-expenses"></p>
+          $<p id= "totalExpenses"></p>
         </div>
 
   </fieldset>
-</form>
+</div>
         </article>
         <article class="article-one">
           <header class="header-one">
-            <h3>
-              <a href="http://example.com/article-link">Balance</a>
-            </h3>
-            <time datetime="2016-10-30T09:30Z">For <select><option value="">January</option>
+            <h3>Balance</h3>
+            <div class="month">
+
+            For <select><option value="">January</option>
                     <option value="">February</option>
                     <option value="">March</option>
                     <option value="">April</option>
@@ -218,17 +223,17 @@
                     <option value="">September</option>
                     <option value="">October</option>
                     <option value="">November</option>
-                    <option value="">December</option></select></time>
+                    <option value="">December</option></select></div>
           </header>
-          <button class="calculate-button" type="button" name="button">Calculate Balance</button>
+          <button class="calculate-button" type="button" name="button">Calculate Balance</button><output class= "balance-output" name="result">Output box</output>
 
         </article>
 
       </section>
       <section class="another-sidebar">
-        <h2>Right Sidebar</h2>
+        <h2>Have a little extra cash?</h2>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Here are some sites that can help you decide to do with all those stacks:
         </p>
       </section>
     </main>
