@@ -13,7 +13,7 @@
 body {
     color: #555;
     font-family: Open Sans;
-    font-size: 16px;
+    font-size: 1rem;
     position: relative;
     height: 100vh;
     font-weight: 400;
@@ -30,8 +30,8 @@ body {
 
 .top {
     height: 40vh;
+    /*width: 200vh;*/
     background-image: url($tacks.jpg);
-    /*linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);*/
     background-size: cover;
     background-position: center;
     position: relative;
@@ -39,7 +39,7 @@ body {
 
 .budget {
     position: absolute;
-    width: 350px;
+    width: 25em;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -48,25 +48,25 @@ body {
 }
 
 .budgetTitle {
-    font-size: 18px;
+    font-size: 1rem;
     text-align: center;
-    margin-bottom: 10px;
-    font-weight: 300;
+    margin-bottom: 1em;
+    font-weight: bold;
 }
 
 .budgetValue {
-    font-weight: 300;
-    font-size: 46px;
+    font-weight: bold;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
+    margin-bottom: 1em;
+    letter-spacing: 0.05em;
 }
 
 .budgetIncome,
 .budget__expenses {
-    padding: 12px;
+    padding: 1em;
     text-transform: uppercase;
-    border-radius: 50px 50px;
+    border-radius: 1em;
     font-size: 1rem;
 }
 
@@ -89,7 +89,7 @@ body {
 
 .budgetIncomeValue,
 .budget__expenses--value {
-    letter-spacing: 1px;
+    letter-spacing: .03em;
     float: left;
     margin-top: .2em;
 
@@ -104,7 +104,7 @@ body {
 
 /***** FORM *****/
 .add {
-    padding: 14px;
+    padding: 1em;
     border-bottom: 1px solid #e7e7e7;
     background-color: #f7f7f7;
 }
@@ -115,14 +115,14 @@ body {
 }
 
 .add__type {
-    width: 40px;
+    width: 2em;
     border: 1px solid #e7e7e7;
-    height: 25px;
-    font-size: 18px;
+    height: 2em;
+    font-size: 1rem;
     color: inherit;
     background-color: #fff;
-    margin-right: 10px;
-    font-weight: 300;
+    margin-right: 1em;
+    font-weight: normal;
     transition: border 0.3s;
 }
 
@@ -132,18 +132,18 @@ body {
     background-color: #fff;
     color: inherit;
     font-family: inherit;
-    font-size: 14px;
-    padding: 12px 15px;
-    margin-right: 10px;
+    font-size: 1rem;
+    padding: 1em 1em;
+    margin-right: 1em;
     border-radius: 5px;
     transition: border 0.3s;
 }
 
-.add__description { width: 400px;}
-.add__value { width: 100px;}
+.add__description { width: 20em;}
+.add__value { width: 7em;}
 
 .add__btn {
-    font-size: 35px;
+    font-size: 2rem;
     background: none;
     border: none;
     color: #28B9B5;
@@ -151,10 +151,10 @@ body {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.1;
-    margin-left: 10px;
+    margin-left: 0.1em;
 }
 
-.add__btn:active { transform: translateY(2px); }
+.add__btn:active { transform: translateY(0.08em); }
 
 .add__type:focus,
 .add__description:focus,
@@ -173,27 +173,27 @@ body {
 
 .income {
     float: left;
-    width: 475px;
+    width: 25em;
     margin-right: 1em;
 }
 
 .expenses {
     float: left;
-    width: 475px;
+    width: 25em;
 }
 
 h2 {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 1em;
 }
 
 .income__title { color: forestgreen; }
 .expenses__title { color: red; }
 
 .item {
-    padding: 13px;
+    padding: 1em;
     border-bottom: 1px solid #e7e7e7;
 }
 
@@ -226,7 +226,7 @@ h2 {
 }
 
 .item__delete--btn {
-    font-size: 22px;
+    font-size: 1rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -237,10 +237,10 @@ h2 {
 }
 
 .item__delete--btn:focus { outline: none; }
-.item__delete--btn:active { transform: translateY(2px); }
+.item__delete--btn:active { transform: translateY(.08em); }
 
 .item:hover .item__delete--btn { display: block; }
-.item:hover .item__value { transform: translateX(-20px); }
+.item:hover .item__value { transform: translateX(-1em); }
 
 
 
