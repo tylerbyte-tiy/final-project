@@ -102,15 +102,15 @@ const budgetController = (function(){
 const UIController = (function() {
 
 	const DOMstrings = {
-		inputType: '.add__type',
-		inputDescription: '.add__description',
-		inputValue: '.add__value',
-		inputBtn: '.add__btn',
+		inputType: '.addType',
+		inputDescription: '.addDescription',
+		inputValue: '.addValue',
+		inputBtn: '.addBtn',
 		incomeContainer: '.income__list',
 		expensesContainer: '.expenses__list',
 		budgetLabel: '.budgetValue',
 		incomeLabel: '.budgetIncomeValue',
-		expensesLabel: '.budget__expenses--value',
+		expensesLabel: '.budgetExpensesValue',
 		container: '.container',
 		dateLabel: '.budgetTitle--month'
 	};
@@ -151,17 +151,17 @@ const UIController = (function() {
 			};
 		},
 
-		addListItem: function(obj,type) {
+		addListItem: function(obj, type) {
 
-			let html, newHtml,element, fields, fieldsArr;
+			let html, newHtml, element, fields, fieldsArr;
 
 			if (type == 'income') {
 				element = DOMstrings.incomeContainer;
-				html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></div>';
+				html = '<div class="item clearfix" id="income-%id%"><div class="itemDescription">%description%</div><div class="right clearfix"><div class="itemValue">%value%</div><div class="itemDelete"><button class="itemDeleteButton"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></div>';
 			} else if (type === 'expense') {
 				element = DOMstrings.expensesContainer;
 
-				html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></div>'
+				html = '<div class="item clearfix" id="expense-%id%"><div class="itemDescription">%description%</div><div class="right clearfix"><div class="itemValue">%value%</div><div class="itemDelete"><button class="itemDeleteButton"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></div>'
 			};
 			// Replace the placeholder text with some actual data
 			newHtml = html.replace('%id%', obj.id);
@@ -250,14 +250,14 @@ const controller = (function(budgetCtrl, UICtrl) {
 		const DOM = UICtrl.getDOMstrings();
 
 		document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
-
+		// Press enter to to add income/expense -->
 		document.addEventListener('keypress', function(event){
 
 			if (event.keycode === 13 || event.which === 13) {
 				ctrlAddItem();
 			}
 		});
-		document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
+		document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem, console.log("Deleted!"));
 
 		document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
 	};
