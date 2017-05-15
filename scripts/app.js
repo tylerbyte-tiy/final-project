@@ -45,3 +45,9 @@ function addListenerForBalance() {
     expensesTotal();
   })
 }
+
+// -----------------------
+
+let totalIncomeButton = document.getElementById("totalIncome");
+  totalIncomeButton.addEventListener('click', function () {
+  let incomeInput = document.getElementById("input1").value+document.getElementById("input2").value+getElementById("input3").value+document.getElementById("input4").value+document.getElementById("input5").value

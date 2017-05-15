@@ -43,14 +43,14 @@ footer{
 }
 .article-one{
   background-color: white;
-  border-radius: 50px 0px 50px 0px;
+  border-radius: 50px 0px 0px 0px;
   padding-bottom: 5px;
   margin-bottom: 10px;
 
 }
 .article-two{
   background-color: white;
-  border-radius: 0px 50px 0px 50px;
+  border-radius: 0px 50px 0px 0px;
   padding-bottom: 5px;
   margin-bottom: 10px;
 
@@ -71,7 +71,6 @@ footer{
 }
 header{
   background-color: darkslategray;
-
 }
 .header-one{
   display: grid;
@@ -121,4 +120,8 @@ li{
 }
 p{
   padding-left: 5px;
+}
+h3{
+  color: white;
+  text-decoration: underline;
 }
