@@ -1,4 +1,4 @@
-"use strict"
+incomeList"use strict"
 
 //BUDGET CONTROLLER
 const budgetController = (function(){
@@ -91,13 +91,13 @@ const UIController = (function() {
 		inputDescription: '.addDescription',
 		inputValue: '.addValue',
 		inputBtn: '.addBtn',
-		incomeContainer: '.income__list',
-		expensesContainer: '.expenses__list',
+		incomeContainer: '.incomeList',
+		expensesContainer: '.expensesList',
 		budgetLabel: '.budgetValue',
 		incomeLabel: '.budgetIncomeValue',
 		expensesLabel: '.budgetExpensesValue',
 		container: '.container',
-		dateLabel: '.budgetTitle--month'
+		dateLabel: '.budgetTitleMonth'
 	};
 
 	const formatNumber = function(num, type) {
@@ -182,7 +182,7 @@ const UIController = (function() {
 
 		displayMonth: function() {
 
-			let now, year, month;
+			let now, year, month, months;
 
 			now = new Date();
 
@@ -235,7 +235,7 @@ const controller = (function(budgetCtrl, UICtrl) {
 				ctrlAddItem();
 			}
 		});
-
+		// toggle green and red checkmark
 		document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
 	};
 	const updateBudget = function() {
