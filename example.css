@@ -112,18 +112,19 @@ body {
 .add {
     padding: 1em;
     border-bottom: 1px solid #e7e7e7;
-    background-color: #f7f7f7;
+    background-color: green;
 }
 
 .addContainer {
     margin: 0 auto;
     text-align: center;
+    background-color: green;
 }
 
 .addType {
-    width: 2em;
+    width: 2.5em;
     border: 1px solid #e7e7e7;
-    height: 2em;
+    height: 2.5em;
     font-size: 1rem;
     color: inherit;
     background-color: #fff;

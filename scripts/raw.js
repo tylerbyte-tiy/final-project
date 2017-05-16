@@ -1,13 +1,7 @@
+"use strict"
+
 //BUDGET CONTROLLER
 const budgetController = (function(){
-
-	const Expense = function(id, description, value) {
-
-		this.id = id;
-		this.description = description;
-		this.value = value;
-	};
-
 
 	const Income = function(id, description, value) {
 
@@ -16,13 +10,11 @@ const budgetController = (function(){
 		this.value = value;
 	};
 
-	const calculateTotal = function(type) {
+	const Expense = function(id, description, value) {
 
-		let sum = 0;
-		data.allItems[type].forEach(function(current) {
-			sum += current.value;
-		});
-		data.totals[type] = sum;
+		this.id = id;
+		this.description = description;
+		this.value = value;
 	};
 
 	const data = {
@@ -35,7 +27,15 @@ const budgetController = (function(){
 			income: 0
 		},
 		budget: 0,
-		percentage: -1
+	};
+
+	const calculateTotal = function(type) {
+
+		let sum = 0;
+		data.allItems[type].forEach(function(current) {
+			sum += current.value;
+		});
+		data.totals[type] = sum;
 	};
 
 	return {
@@ -60,21 +60,6 @@ const budgetController = (function(){
 			// Push it into data structure
 			data.allItems[type].push(newItem);
 			return newItem;
-		},
-
-		deleteItem: function(type, id) {
-
-
-			const ids = data.allItems[type].map(function(current) {
-				return current.id;
-			});
-
-			index = ids.indexOf(id);
-
-			if (index !== -1) {
-				data.allItems[type].splice(index, 1);
-			}
-
 		},
 
 		calculateBudget: function() {
@@ -157,11 +142,11 @@ const UIController = (function() {
 
 			if (type == 'income') {
 				element = DOMstrings.incomeContainer;
-				html = '<div class="item clearfix" id="income-%id%"><div class="itemDescription">%description%</div><div class="right clearfix"><div class="itemValue">%value%</div><div class="itemDelete"><button class="itemDeleteButton"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></div>';
+				html = '<div class="item clearfix" id="income-%id%"><div class="itemDescription">%description%</div><div class="right clearfix"><div class="itemValue">%value%</div></div></div>';
 			} else if (type === 'expense') {
 				element = DOMstrings.expensesContainer;
 
-				html = '<div class="item clearfix" id="expense-%id%"><div class="itemDescription">%description%</div><div class="right clearfix"><div class="itemValue">%value%</div><div class="itemDelete"><button class="itemDeleteButton"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></div>'
+				html = '<div class="item clearfix" id="expense-%id%"><div class="itemDescription">%description%</div><div class="right clearfix"><div class="itemValue">%value%</div></div></div>'
 			};
 			// Replace the placeholder text with some actual data
 			newHtml = html.replace('%id%', obj.id);
@@ -169,13 +154,6 @@ const UIController = (function() {
 			newHtml = newHtml.replace('%value%', formatNumber(obj.value, type));
 			// Insert the HTML
 			document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
-		},
-
-		deleteListItem: function(selectorID) {
-
-			const el = document.getElementById(selectorID);
-			el.parentNode.removeChild(el);
-      console.log("A list item has been deleted!");
 		},
 
 		clearFields: function() {
@@ -257,7 +235,6 @@ const controller = (function(budgetCtrl, UICtrl) {
 				ctrlAddItem();
 			}
 		});
-		document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem, console.log("Deleted!"));
 
 		document.querySelector(DOM.inputType).addEventListener('change', UICtrl.changedType);
 	};
@@ -290,28 +267,6 @@ const controller = (function(budgetCtrl, UICtrl) {
 			updateBudget();
 		}
 
-	};
-
-	const ctrlDeleteItem = function(event) {
-    console.log("I just clicked the delete button");
-		let itemID, splitID, type, ID;
-
-		itemID = event.target.parentNode.parentNode.parentNode.parentNode.id
-
-		if (itemID) {
-
-			splitID = itemID.split('-');
-			type = splitID[0];
-			ID = parseInt(splitID[1]);
-
-			// Delete item from the data structure
-			budgetCtrl.ctrlDeleteItem(type, ID);
-			// Delete the item from the UI
-			UICtrl.deleteListItem(itemID);
-			// Update and show the new budget
-			updateBudget();
-
-		}
 	};
 
 	return {
