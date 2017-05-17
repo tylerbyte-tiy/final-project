@@ -1,4 +1,4 @@
-incomeList"use strict"
+"use strict"
 
 //BUDGET CONTROLLER
 const budgetController = (function(){
@@ -138,7 +138,7 @@ const UIController = (function() {
 
 		addListItem: function(obj, type) {
 
-			let html, newHtml, element, fields, fieldsArr;
+			let html, newHtml, element;
 
 			if (type == 'income') {
 				element = DOMstrings.incomeContainer;
@@ -157,6 +157,8 @@ const UIController = (function() {
 		},
 
 		clearFields: function() {
+
+			let fields, fieldsArr;
 
 			fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
 

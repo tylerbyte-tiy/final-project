@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 .clearfix::after {
@@ -183,15 +184,19 @@ body {
   }
 
 .income {
-    float: left;
+    /*float: left;*/
     width: 25em;
     margin-right: 1em;
+    display: inline-block;
 
 }
 
 .expenses {
-    float: left;
+    /*float: left;*/
     width: 25em;
+    display: inline-block;
+
+
 }
 
 h2 {
@@ -273,4 +278,9 @@ h2 {
 
 .radioInline{
   display: inline-block;
+}
+
+.centerBox {
+  text-align: center;
+  height: 100px;
 }
