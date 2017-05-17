@@ -31,9 +31,7 @@ body {
  border: 1px solid red !important;
 }
 
-/**********************************************
-*** TOP PART
-**********************************************/
+ /*TOP*/
 
 .top {
     height: 40vh;
@@ -101,15 +99,10 @@ body {
     margin-top: .2em;
 
 }
+ /*BOTTOM */
 
+/*FORM*/
 
-
-
-/**********************************************
-*** BOTTOM PART
-**********************************************/
-
-/***** FORM *****/
 .add {
     padding: 1em;
     border-bottom: 1px solid #e7e7e7;
@@ -177,7 +170,8 @@ body {
 
 .addBtn:focus { outline: none; }
 
-/***** LISTS *****/
+/*LISTS*/
+
 .container {
     width: 75em;
     margin: 1em auto;
@@ -192,11 +186,8 @@ body {
 }
 
 .expenses {
-    /*float: left;*/
     width: 25em;
     display: inline-block;
-
-
 }
 
 h2 {
@@ -232,49 +223,15 @@ h2 {
     transition: transform 0.3s;
 }
 
-.income .itemValue,
-.income .itemDeleteButton {
+.income .itemValue {
     color: #28B9B5;
 }
 
-.expenses .itemValue,
-.expenses .itemDeleteButton {
+.expenses .itemValue{
     color: #FF5049;
 }
 
-
-.itemDelete {
-    float: left;
-}
-
-.itemDeleteButton {
-    font-size: 1rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1;
-    display: none;
-}
-
-.itemDeleteButton:focus { outline: none; }
-.itemDeleteButton:active { transform: translateY(.08em); }
-
-.item:hover .itemDeleteButton { display: block; }
 .item:hover .itemValue { transform: translateX(-1em); }
-
-
-
-.unpaid {
-    background-color: #FFDAD9 !important;
-    cursor: pointer;
-    color: #FF5049;
-
-}
-
-
-.unpaid:hover .itemDescription { font-weight: 900; }
 
 .radioInline{
   display: inline-block;

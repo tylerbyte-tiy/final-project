@@ -3,14 +3,14 @@
 //BUDGET CONTROLLER
 const budgetController = (function(){
 
-	const Income = function(id, description, value) {
+	const income = function(id, description, value) {
 
 		this.id = id;
 		this.description = description;
 		this.value = value;
 	};
 
-	const Expense = function(id, description, value) {
+	const expense = function(id, description, value) {
 
 		this.id = id;
 		this.description = description;
@@ -52,9 +52,9 @@ const budgetController = (function(){
 
 			//Create new item
 			if (type === 'expense') {
-				newItem = new Expense(ID, des, val);
+				newItem = new expense(ID, des, val);
 			} else if (type === 'income') {
-				newItem = new Income(ID, des, val);
+				newItem = new income(ID, des, val);
 			}
 
 			// Push it into data structure
@@ -75,8 +75,8 @@ const budgetController = (function(){
 
 			return {
 				budget: data.budget,
-				totalIncome: data.totals.income,
-				totalExpense: data.totals.expense,
+				totalincome: data.totals.income,
+				totalexpense: data.totals.expense,
 			}
 		}
 	};
@@ -178,8 +178,8 @@ const UIController = (function() {
 			obj.budget > 0 ? type = 'income' : type = 'expense';
 
 			document.querySelector(DOMstrings.budgetLabel).textContent = formatNumber(obj.budget, type);
-			document.querySelector(DOMstrings.incomeLabel).textContent = formatNumber(obj.totalIncome, 'income');
-			document.querySelector(DOMstrings.expensesLabel).textContent = formatNumber(obj.totalExpense, 'expense');
+			document.querySelector(DOMstrings.incomeLabel).textContent = formatNumber(obj.totalincome, 'income');
+			document.querySelector(DOMstrings.expensesLabel).textContent = formatNumber(obj.totalexpense, 'expense');
 		},
 
 		displayMonth: function() {
@@ -276,8 +276,8 @@ const controller = (function(budgetCtrl, UICtrl) {
 			UICtrl.displayMonth();
 			UICtrl.displayBudget({
 				budget: 0,
-				totalIncome: 0,
-				totalExpense: 0
+				totalincome: 0,
+				totalexpense: 0
       });
 			setupEventListeners();
 
