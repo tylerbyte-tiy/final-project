@@ -35,7 +35,6 @@ body {
 
 .top {
     height: 40vh;
-    /*width: 200vh;*/
     background-image: url($tacks.jpg);
     background-size: cover;
     background-position: center;
@@ -57,6 +56,7 @@ body {
     text-align: center;
     margin-bottom: 1em;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 .budgetValue {
@@ -174,16 +174,12 @@ body {
 
 .container {
     width: auto;
-    margin: 1em auto;
-    height: 20em;
+    height: auto;
   }
 
 .income {
-    /*float: left;*/
     width: 25em;
-    margin-right: 1em;
     display: inline-block;
-
 }
 
 .expenses {
