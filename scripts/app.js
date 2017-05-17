@@ -1,7 +1,6 @@
 "use strict"
 
-//BUDGET CONTROLLER
-const budgetController = (function(){
+const dataCalculator = (function(){
 
 	const income = function(id, description, value) {
 
@@ -83,8 +82,7 @@ const budgetController = (function(){
 
 })();
 
-// UI CONTROLLER
-const UIController = (function() {
+const displayUI = (function() {
 
 	const DOMstrings = {
 		inputType: '.addType',
@@ -220,10 +218,7 @@ const UIController = (function() {
 
 })();
 
-
-
-//GLOBAL APP CONTROLLER
-const controller = (function(budgetCtrl, UICtrl) {
+const initializer = (function(budgetCtrl, UICtrl) {
 
 	const setupEventListeners = function() {
 
@@ -283,6 +278,6 @@ const controller = (function(budgetCtrl, UICtrl) {
 
 		}
 	}
-})(budgetController, UIController);
+})(dataCalculator, displayUI);
 
-controller.init();
+initializer.init();
