@@ -175,6 +175,7 @@ body {
 .container {
     width: 75em;
     margin: 1em auto;
+    height: 20em;
   }
 
 .income {
@@ -239,5 +240,5 @@ h2 {
 
 .centerBox {
   text-align: center;
-  height: 100px;
+  height: 10em;
 }
