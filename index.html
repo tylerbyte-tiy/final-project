@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>$tacks</title>
+    <link rel="stylesheet" href="./styles/example.css">
+  </head>
+  <body>
+
+    <div class="top">
+      <div class="budget">
+        <div class="budgetIncome clearfix">
+          <div class="budgetIncomeText">Income</div>
+          <div class="right">
+            <div class="budgetIncomeValue"></div>
+          </div>
+        </div>
+        <div class="budgetExpenses clearfix">
+          <div class="budgetExpensesText">Expenses</div>
+          <div class="right clearfix">
+            <div class="budgetExpensesValue">$ </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="bottom">
+        <div class="add">
+          <div class="addContainer">
+            <select class="addType">
+              <option value="income" selected>+</option>
+              <option value="expense">-</option>
+            </select>
+          <input type="text" class="addDescription" placeholder="Add income/expense description">
+          <input type="number" class="addValue" placeholder="$$$">
+          <button class="addBtn">
+          <i class="fa fa-check" aria-hidden="true"></i>
+          </button>
+          </div>
+        </div>
+        <div class="container clearfix">
+          <div class="budgetTitle">$tacks for <span class="budgetTitleMonth"></span>:
+          </div>
+
+          <div class="budgetValue"></div>
+            <div class="centerBox clearfix">
+              <div class="income">
+                <h2 class="incomeTitle">Income</h2>
+                <div class="incomeList">
+                </div>
+              </div>
+              <div class="expenses">
+                <h2 class="expensesTitle">Expenses</h2>
+                <div class="expensesList">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      <script src="https://use.fontawesome.com/4efbfd0864.js"></script>
+      <script src="./scripts/raw.js"></script>
+  </body>
+</html>
