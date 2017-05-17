@@ -173,7 +173,7 @@ body {
 /*LISTS*/
 
 .container {
-    width: 75em;
+    width: auto;
     margin: 1em auto;
     height: 20em;
   }
