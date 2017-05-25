@@ -18,7 +18,7 @@ body {
     position: relative;
     height: 100vh;
     font-weight: 400;
-    background-color: lightgreen;
+    background-color: #B6F587;
 }
 
 .right {
@@ -203,13 +203,26 @@ h2 {
   text-align: center;
 }
 
-.item {
+.itemIncome {
     padding: 1em;
     border-bottom: 1px solid #e7e7e7;
 }
 
-.item:first-child { border-top: 1px solid #e7e7e7; }
-.item:nth-child(even) { background-color: #f7f7f7; }
+.itemIncome:first-child { border-top: 1px solid #e7e7e7; }
+.itemIncome:nth-child(odd) { background-color: lightgreen; }
+
+.itemIncome:nth-child(even) { background-color: lightgray; }
+
+.itemExpense {
+    padding: 1em;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.itemExpense:first-child { border-top: 1px solid #e7e7e7; }
+.itemExpense:nth-child(odd) { background-color: orange; }
+
+.itemExpense:nth-child(even) { background-color: lightgray; }
+
 
 .itemDescription {
     float: left;
@@ -238,3 +251,18 @@ h2 {
   text-align: center;
   height: 10em;
 }
+
+/*.itemDelete {
+    float: left;
+}
+
+.itemDeleteBtn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}*/

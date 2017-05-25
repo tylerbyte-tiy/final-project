@@ -1,21 +1,21 @@
 "use strict"
 
 const dataCalculator = (function(){
-
+// Sets the value for the id, description and value equal to the input for income
 	const income = function(id, description, value) {
 
 		this.id = id;
 		this.description = description;
 		this.value = value;
 	};
-
+// Sets the value for the id, description and value equal to the input for expenses
 	const expense = function(id, description, value) {
 
 		this.id = id;
 		this.description = description;
 		this.value = value;
 	};
-
+// data initializes all instances of income and expenses
 	const data = {
 		allItems: {
 			expense: [],
@@ -27,7 +27,7 @@ const dataCalculator = (function(){
 		},
 		budget: 0,
 	};
-
+// calculates all of the income and all the expenses
 	const calculateTotal = function(type) {
 
 		let sum = 0;
@@ -140,11 +140,14 @@ const displayUI = (function() {
 
 			if (type == 'income') {
 				element = DOMstrings.incomeContainer;
-				html = '<div class="item clearfix" id="income-%id%"><div class="itemDescription">%description%</div><div class="right clearfix"><div class="itemValue">%value%</div></div></div>';
+				html = '<div class="itemIncome clearfix" id="income-%id%"><div class="itemDescription">%description%</div><div class="right clearfix"><div class="itemValue">%value%</div></div></div>';
+				// <div class="itemDelete">
+				// <button class="itemDeleteBtn"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+				// </div>
 			} else if (type === 'expense') {
 				element = DOMstrings.expensesContainer;
-
-				html = '<div class="item clearfix" id="expense-%id%"><div class="itemDescription">%description%</div><div class="right clearfix"><div class="itemValue">%value%</div></div></div>'
+				html = '<div class="itemExpense clearfix" id="expense-%id%"><div class="itemDescription">%description%</div><div class="right clearfix"><div class="itemValue">%value%</div></div></div>';
+				// <div class="itemDelete"><button class="itemDeleteBtn"><i class="fa fa-window-close" aria-hidden="true"></i></button></div>
 			};
 			// Replace the placeholder text with some actual data
 			newHtml = html.replace('%id%', obj.id);
